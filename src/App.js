@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import NotesList from './test/demo/NotesList'
+import Input from './test/demo/Input'
+import ToDoList from './components/toDoList'
+import Select from './components/select'
+import MyUsual from './test/demo/Usual.jsx'
+import Boiling from './components/BoilingVerdict'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+      data: ['Volvo', 'Saab', 'Mercedes', 'Audi'],
+      selectedData: 'Saab',
+      name: [
+        {name: 111},
+        {name: 222}
+      ]
+  }
+
+  render(h) {
+    const data = this.state.data;
+    return (
+      <div>
+        <NotesList name="haha" />
+        <Input></Input>
+        <ToDoList />
+        <Select 
+          data={data}
+          selectedData = {this.state.selectedData}
+        />
+        <MyUsual name={this.state.name} />
+        <Boiling />
+      </div>
+    )
+  }
 }
 
 export default App;
