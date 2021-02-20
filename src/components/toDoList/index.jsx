@@ -6,9 +6,9 @@ import AppForm from './AppForm'
 class TodoList extends React.Component {
   state = {
     data: [
-      { id: 0, text: '天气不错哦!!!', complete: false },
-      { id: 1, text: '天气不错哦!!!', complete: false },
-      { id: 2, text: '出去玩啊!!!', complete: true },
+      { id: 0, text: 'FineWeather', complete: false },
+      { id: 1, text: 'MathNote', complete: false },
+      { id: 2, text: 'Reading', complete: true },
     ]
   }
 

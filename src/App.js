@@ -1,10 +1,12 @@
 import React from 'react'
-import NotesList from './test/demo/NotesList'
-import Input from './test/demo/Input'
+// import NotesList from './test/demo/NotesList'
+// import Input from './test/demo/Input'
 import ToDoList from './components/toDoList'
 import Select from './components/select'
 import MyUsual from './test/demo/Usual.jsx'
 import Boiling from './components/BoilingVerdict'
+import FilterableProductTable from './components/FilterableProductTable'
+import '@/redux'
 
 class App extends React.Component {
   state = {
@@ -20,8 +22,6 @@ class App extends React.Component {
     const data = this.state.data;
     return (
       <div>
-        <NotesList name="haha" />
-        <Input></Input>
         <ToDoList />
         <Select 
           data={data}
@@ -29,6 +29,7 @@ class App extends React.Component {
         />
         <MyUsual name={this.state.name} />
         <Boiling />
+        <FilterableProductTable />
       </div>
     )
   }
