@@ -2,6 +2,12 @@ import React from 'react'
 import './index.scss'
 
 class Select extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            defaultSelect: ''
+        }
+    }
     
     onHandleChange(e){
         console.log(e.value);
@@ -14,7 +20,7 @@ class Select extends React.Component{
         return (
             <select 
             className = 'sk-select'
-            value={this.props.selectedData}
+            defaultValue={this.props.selectedData}
             onChange={this.onHandleChange}
             >
                 {selectDom}
