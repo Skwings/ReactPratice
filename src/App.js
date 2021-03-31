@@ -1,7 +1,7 @@
 import React from 'react'
 // import NotesList from './test/demo/NotesList'
 // import Input from './test/demo/Input'
-// import ToDoList from './components/toDoList'
+import ToDoList from './components/toDoList'
 // import Select from './components/select'
 // import MyUsual from './test/demo/Usual.jsx'
 // import Boiling from './components/BoilingVerdict'
@@ -24,6 +24,7 @@ class App extends React.Component {
     return (
       <div>
         <SimpleRadio />
+        <ToDoList />
       </div>
     )
   }
